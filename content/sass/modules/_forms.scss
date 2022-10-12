@@ -1,0 +1,68 @@
+form{
+  label{
+    text-transform: capitalize;
+    @include font-size(18px);
+    @include line-height(24px);
+  }
+  .form-control{
+    height: 42px;
+    @include radius(0);
+    border: 1px solid $blue-500;
+  }
+
+  .form-check{
+    .form-check-label{
+      margin-left: 20px;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    input[type="checkbox"] {
+      height: 16px;
+      width: 16px;
+      background: $white;
+      position: relative;
+      margin-top: 2px;
+      @include appearance(none);
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        height: 24px;
+        width: 24px;
+        background-color: $white;
+        border: 1px solid $blue-500;
+        @include transform(translateY(-50%));
+      }
+      // CSS for checked state
+      &:checked {
+        &::before {
+          content: "";
+          position: absolute;
+          z-index: 1;
+          left: 50%;
+          top: 50%;
+          width: 8px;
+          height: 16px;
+          border-width: 0 1px 1px 0 $white;
+          border: 2px solid $white;
+          border-left: 0;
+          border-top: 0;
+          @include transform(translateY(-65%) rotate(45deg));
+        }
+        &::after {
+          border: 1px solid $blue-500;
+          background-color: $blue-500;
+        }
+      }
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
+
+  // validation css
+  .invalid-feedback{
+    text-align: right;
+  }
+}
