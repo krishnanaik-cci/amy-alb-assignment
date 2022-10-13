@@ -1,0 +1,21 @@
+.redirect-icon{
+  &::before {
+    content: "";
+    height: 15px;
+    width: 15px;
+    right: 7px;
+    margin: 3px 0 0 5px;
+    position: absolute;
+    @include background(url(../images/style-images/icon-redirect.png) center/cover no-repeat);
+  }
+  &-secondary{
+    &::after {
+      content: "";
+      height: 15px;
+      width: 15px;
+      margin: 3px 0 0 8px;
+      position: absolute;
+      @include background(url(../images/style-images/icon-redirect-secondary.png) center/cover no-repeat);
+    }
+  }
+}

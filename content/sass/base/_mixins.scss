@@ -79,6 +79,11 @@
     -moz-flex: $val;
     -webkit-flex: $val;
 }
+@mixin flex-basis($val) {
+    flex-basis: $val;
+    -moz-flex-basis: $val;
+    -webkit-flex-basis: $val;
+}
 @mixin background($value) {
     background: $value;
     -moz-background: $value;

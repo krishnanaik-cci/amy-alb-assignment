@@ -13,6 +13,7 @@
   &-primary {
     color: $white;
     background-color: $blue-100;
+    @include box-shadow(0 0 10px $blue-100);
     &:hover {
       color: $white;
       background-color: $blue-100;
@@ -35,6 +36,7 @@
   &-secondary {
     color: $blue-100;
     background-color: $yellow-100;
+    @include box-shadow(0 0 10px $yellow-100);
     &:hover {
       color: $blue-100;
       background-color: $yellow-100;

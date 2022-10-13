@@ -11,7 +11,8 @@ $blue-600: #012B43;
 $yellow-100: #F7BE55;
 $yellow-200: #F5B334;
 $green:#7FBE41;
-$gray: #707070;
+$gray-100: #707070;
+$gray-200: #F4F4F4;
 $bg-color: (
   white: $white,
   black: $black,
@@ -22,6 +23,7 @@ $text-color: (
 ) !default;
 $grid-breakpoints: (
   xs: 0,
+  xs-375: 375px,
   sm: 576px,
   md: 768px,
   lg: 992px,
