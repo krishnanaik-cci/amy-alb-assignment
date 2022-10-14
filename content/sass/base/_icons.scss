@@ -19,3 +19,15 @@
     }
   }
 }
+
+.download-icon{
+  position: relative;
+  &::after {
+    content: "";
+    height: 15px;
+    width: 15px;
+    margin: 3px 0 0 8px;
+    position: absolute;
+    @include background(url(../images/style-images/icon-download.png) center/cover no-repeat);
+  }
+}

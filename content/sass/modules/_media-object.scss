@@ -1,10 +1,22 @@
-.media{
-  &-body{
-    h5{
+.media {
+  &-body {
+    h5 {
       text-align: center;
       font-weight: bold;
       @include font-size(18px);
       @include line-height(24px);
+    }
+    .btn-primary {
+      padding: 13px 40px 13px;
+      @include media-breakpoint-up(xs-375) {
+      padding: 13px 60px 8px;
+      }
+      @include media-breakpoint-up(lg) {
+        padding: 13px 20px 8px;
+      }
+      @include media-breakpoint-up(xl) {
+        padding: 13px 40px 8px;
+      }
     }
   }
 }

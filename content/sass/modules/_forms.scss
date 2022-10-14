@@ -1,19 +1,28 @@
-form{
-  label{
+form {
+  label {
+    margin-bottom: 23px;
     text-transform: capitalize;
     @include font-size(18px);
     @include line-height(24px);
   }
-  .form-control{
+  .form-control,
+  .custom-select {
     height: 42px;
     @include radius(0);
     border: 1px solid $blue-500;
   }
 
-  .form-check{
-    .form-check-label{
+  .form-check {
+    display: flex;
+    @include media-breakpoint-up(md) {
+      display: block;
+    }
+    .form-check-label {
+      @include font-size(16px);
+      @include line-height(17px);
+      color: $blue-100;
       margin-left: 20px;
-      &:hover{
+      &:hover {
         cursor: pointer;
       }
     }
@@ -55,14 +64,47 @@ form{
           background-color: $blue-500;
         }
       }
-      &:hover{
+      &:hover {
         cursor: pointer;
+      }
+    }
+    // checkbox validation css
+    .invalid-feedback {
+      text-align: left;
+      margin-left: 20px;
+    }
+    .form-check-input {
+      &:invalid ~ .form-check-label {
+        color: $blue-100;
       }
     }
   }
 
+  .custom-select {
+    option {
+      background-color: $gray-200;
+      &:hover {
+        background-color: $green;
+      }
+    }
+    @include background(url(../images/style-images/icon-down-arrow.png) 98%/20px no-repeat);
+  }
+
+  .form-captcha {
+    margin: 20px 0 20px;
+    @include media-breakpoint-up(lg) {
+      margin: 31px 0 20px;
+    }
+    label {
+      margin-bottom: 12px;
+    }
+  }
+
   // validation css
-  .invalid-feedback{
+  .invalid-feedback {
     text-align: right;
+  }
+  &.was-validated .form-check-input:valid ~ .form-check-label {
+    color: $blue-100;
   }
 }

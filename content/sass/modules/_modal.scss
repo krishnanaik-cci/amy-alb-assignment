@@ -1,0 +1,15 @@
+.modal {
+  .modal-dialog {
+    .modal-content {
+      .modal-body {
+        @include radius(10px);
+      }
+    }
+  }
+  button.close {
+    font-weight: lighter;
+    color: $yellow-200;
+    padding: 15px 20px 0;
+    @include font-size(35px);
+  }
+}

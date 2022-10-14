@@ -6,38 +6,121 @@
   color: $green;
 }
 
+.bg-gray-200 {
+  background-color: $gray-200;
+}
+
+.bg-blue-100 {
+  background-color: $blue-100;
+}
+
 .fs-40 {
   font-size: 2.5rem !important;
 }
 
-.fs-14{
-  font-size: 0.875rem !important;
-}
-
-.fs-12{
+.fs-12 {
   font-size: 0.75rem !important;
 }
 
-.line-height-17{
+.fs-14 {
+  font-size: 0.875rem !important;
+}
+
+.fs-lg-15 {
+  @include media-breakpoint-up(lg) {
+    font-size: 0.938rem !important;
+  }
+}
+
+.fs-18 {
+  font-size: 1.125rem !important;
+}
+
+.fs-lg-18 {
+  @include media-breakpoint-up(lg) {
+    font-size: 1.125rem !important;
+  }
+}
+
+.fs-22 {
+  font-size: 1.37rem !important;
+}
+
+.line-height-17 {
   @include line-height(17px);
 }
 
-.line-height-18{
+.line-height-lg-24 {
+  @include media-breakpoint-up(lg) {
+    line-height: 1.5rem !important;
+  }
+}
+
+.line-height-36 {
+  @include line-height(36px);
+}
+
+.line-height-18 {
   @include line-height(18px);
 }
 
-.pl-29{
-  padding-left: 29px;
+.line-height-lg-15 {
+  @include media-breakpoint-up(lg) {
+    @include line-height(15px);
+  }
 }
 
-.mb-ne-3{
+.pl-29 {
+  padding-left: 29px;
+}
+.pb-20 {
+  padding-bottom: 20px;
+}
+
+.pt-lg-18 {
+  @include media-breakpoint-up(lg) {
+    padding-top: 18px;
+  }
+}
+
+.mb-lg-18 {
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 18px !important;
+  }
+}
+
+.pt-lg-32 {
+  @include media-breakpoint-up(lg) {
+    padding-top: 32px;
+  }
+}
+
+.mb-ne-3 {
   margin-bottom: -3px;
 }
 
-.mb-ne-10{
+.mb-ne-10 {
   margin-bottom: -10px;
 }
 
-.mt-43{
+.mt-43 {
   margin-top: 43px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.mb-23 {
+  margin-bottom: 23px;
+}
+
+.mb-12 {
+  margin-bottom: 12px;
+}
+
+.mb-lg-19 {
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 19px !important;
+  }
 }
