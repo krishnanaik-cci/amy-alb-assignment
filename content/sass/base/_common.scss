@@ -2,22 +2,6 @@
   overflow: hidden;
 }
 
-a{
-  &:not(.nav-link){
-    text-decoration: underline;
-    color: $blue-100;
-    &:hover{
-      color: $blue-100;
-    }
-  }
-  &.btn-primary{
-    color: $white;
-  }
-  &.btn-secondary, &.dropdown-item, &.btn-primary{
-    text-decoration: none;
-  }
-}
-
 .inner-container {
   max-width: 865px;
   margin: 2px auto;

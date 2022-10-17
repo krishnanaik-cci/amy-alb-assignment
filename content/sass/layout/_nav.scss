@@ -101,7 +101,7 @@ header {
         right: 0%;
         transition: 0.2s;
       }
-      background-image: linear-gradient($blue-600, $blue-100);
+      background-image: linear-gradient($blue-600, $blue-700);
       @include media-breakpoint-up(lg) {
         background-image: none;
         height: auto;

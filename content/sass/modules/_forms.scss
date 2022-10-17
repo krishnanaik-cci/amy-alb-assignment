@@ -13,6 +13,7 @@ form {
   }
 
   .form-check {
+    padding-left: 0;
     display: flex;
     @include media-breakpoint-up(md) {
       display: block;
@@ -21,57 +22,47 @@ form {
       @include font-size(16px);
       @include line-height(17px);
       color: $blue-100;
-      margin-left: 20px;
+      margin-left: 35px;
       &:hover {
         cursor: pointer;
       }
     }
     input[type="checkbox"] {
-      height: 16px;
-      width: 16px;
-      background: $white;
-      position: relative;
-      margin-top: 2px;
       @include appearance(none);
-      &::after {
+      background-color: $white;
+      margin: 0;
+      font: inherit;
+      color: currentColor;
+      width: 24px;
+      height: 24px;
+      border: 1px solid $blue-500;
+      transform: translateY(-0.075em);
+      // places the checkbox in the center
+      display: grid;
+      place-content: center;
+      &::before {
         content: "";
-        position: absolute;
-        top: 50%;
-        height: 24px;
-        width: 24px;
-        background-color: $white;
-        border: 1px solid $blue-500;
-        @include transform(translateY(-50%));
+        width: 12px;
+        height: 12px;
+        transform: scale(0);
+        transition: 120ms transform ease-in-out;
+        box-shadow: inset 16px 16px $blue-500;
+        transform-origin: bottom left;
+        clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
       }
-      // CSS for checked state
       &:checked {
         &::before {
-          content: "";
-          position: absolute;
-          z-index: 1;
-          left: 50%;
-          top: 50%;
-          width: 8px;
-          height: 16px;
-          border-width: 0 1px 1px 0 $white;
-          border: 2px solid $white;
-          border-left: 0;
-          border-top: 0;
-          @include transform(translateY(-65%) rotate(45deg));
-        }
-        &::after {
-          border: 1px solid $blue-500;
-          background-color: $blue-500;
+          transform: scale(1);
         }
       }
-      &:hover {
-        cursor: pointer;
-      }
+    }
+    .form-control + .form-control {
+      margin-top: 16px;
     }
     // checkbox validation css
     .invalid-feedback {
       text-align: left;
-      margin-left: 20px;
+      margin-left: 35px;
     }
     .form-check-input {
       &:invalid ~ .form-check-label {
@@ -104,7 +95,28 @@ form {
   .invalid-feedback {
     text-align: right;
   }
-  &.was-validated .form-check-input:valid ~ .form-check-label {
-    color: $blue-100;
+  &.was-validated {
+    .form-check-input:valid ~ .form-check-label {
+      color: $blue-100;
+    }
+    .custom-select {
+      &:valid {
+        border-color: $blue-500;
+        @include background(url(../images/style-images/icon-down-arrow.png) 98%/20px no-repeat);
+        &:focus {
+          border-color: $blue-500;
+        }
+      }
+    }
+    .form-control {
+      &:valid {
+        border-color: $blue-500;
+        background-image: none;
+        &:focus {
+          border-color: $blue-500;
+          @include box-shadow(0 0 0 0.2rem rgba(65, 182, 230, 0.25));
+        }
+      }
+    }
   }
 }

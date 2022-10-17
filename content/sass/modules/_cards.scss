@@ -1,5 +1,53 @@
 .card {
-  padding: 8px 24px;
+  padding: 8px 15px;
+  // main card
+  &-primary {
+    margin-top: -142px;
+    padding: 0 15px 62px;
+    @include media-breakpoint-up(lg) {
+      margin-top: -350px;
+      padding: 8px 60px;
+    }
+    @include radius(10px 10px 0 0);
+    // card left border 
+    &::before {
+      content: "";
+      position: absolute;
+      border: 1px solid $white;
+      left: -1px;
+      height: 18%;
+      bottom: 50%;
+      @include media-breakpoint-up(md) {
+        bottom: 30%;
+        height: 54%;
+      }
+      @include media-breakpoint-up(lg) {
+        bottom: 0;
+      }
+    }
+    // card right border
+    &::after {
+      content: "";
+      position: absolute;
+      border: 1px solid $white;
+      right: -1px;
+      height: 18%;
+      bottom: 50%;
+      @include media-breakpoint-up(md) {
+        bottom: 30%;
+      }
+      @include media-breakpoint-up(lg) {
+        height: 54%;
+        bottom: 0;
+      }
+    }
+    h2 {
+      margin: 25px 0 20px 0;
+      @include media-breakpoint-up(lg) {
+        margin: 30px 0 45px 0;
+      }
+    }
+  }
   &-secondary {
     color: $white;
     border: 2px solid $green;
