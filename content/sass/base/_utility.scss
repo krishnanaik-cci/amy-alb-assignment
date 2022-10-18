@@ -104,8 +104,8 @@
   padding-bottom: 20px;
 }
 
-.pt-lg-18 {
-  @include media-breakpoint-up(lg) {
+.pt-md-18 {
+  @include media-breakpoint-up(md) {
     padding-top: 18px;
   }
 }

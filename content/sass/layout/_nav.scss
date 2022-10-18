@@ -65,6 +65,9 @@ header {
       position: static;
     }
     padding: 3px 16px;
+    @include media-breakpoint-up(xl) {
+      padding: 0 16px;
+    }
     &-brand {
       padding-left: 22px;
       @include media-breakpoint-up(lg) {
@@ -129,8 +132,11 @@ header {
             padding: 10px 0 16px 0;
             margin-right: 0;
           }
+          @include media-breakpoint-up(xl) {
+            padding: 10px 0 0 0;
+            margin-right: 0;
+          }
           @include media-breakpoint-up(xxl) {
-            padding: 10px 0 16px 45px;
             margin-right: 10px;
           }
           .nav-item {
@@ -138,8 +144,9 @@ header {
             @include media-breakpoint-up(lg) {
               margin: 0 12px 0 0;
             }
-            @include media-breakpoint-up(xxl) {
+            @include media-breakpoint-up(xl) {
               margin: 0 16px 0 0;
+              padding: 0 0 16px 0;
             }
             &:first-child {
               .nav-link {
@@ -220,7 +227,7 @@ header {
               .dropdown-menu {
                 @include media-breakpoint-up(lg) {
                   position: absolute;
-                  top: 117px;
+                  top: 110px;
                   left: 0;
                   width: 100%;
                   @include justify-content(center);

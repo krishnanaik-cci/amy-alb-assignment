@@ -1,8 +1,14 @@
 .modal {
   .modal-dialog {
     .modal-content {
+      @include radius(10px);
       .modal-body {
-        @include radius(10px);
+        padding: 15px 30px;
+        ul {
+          &.list li {
+            margin-bottom: 20px;
+          }
+        }
       }
     }
   }

@@ -13,9 +13,10 @@
   &-primary {
     color: $white;
     background-color: $blue-100;
-    @include box-shadow(0 0 10px $blue-100);
+    @include box-shadow(0px 0px 0px 4px RGB(9 58 87 / 25%));
     &:hover {
       color: $white;
+      @include box-shadow(none);
       background-color: $blue-100;
     }
     &:focus {
@@ -36,9 +37,10 @@
   &-secondary {
     color: $blue-100;
     background-color: $yellow-100;
-    @include box-shadow(0 0 10px $yellow-100);
+    @include box-shadow(0px 0px 0px 4px RGB(245 179 52 / 25%));
     &:hover {
       color: $blue-100;
+      @include box-shadow(none);
       background-color: $yellow-100;
     }
     &:focus {

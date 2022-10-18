@@ -14,6 +14,7 @@ $yellow-200: #F5B334;
 $green:#7FBE41;
 $gray-100: #707070;
 $gray-200: #F4F4F4;
+$gray-300: #F1F1F1;
 $bg-color: (
   white: $white,
   black: $black,
@@ -32,6 +33,7 @@ $grid-breakpoints: (
   lg: 992px,
   xl: 1200px,
   xxl: 1366px,
+  xxl-1600: 1600px
 ) !default;
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 @include _assert-starts-at-zero($grid-breakpoints);

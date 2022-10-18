@@ -1,20 +1,22 @@
 .banner {
   overflow: hidden;
   .card-secondary {
-    width: 95%;
+    max-width: 95%;
+    z-index: 2;
     padding: 8px 0 30px;
     @include media-breakpoint-up(sm) {
       padding: 8px 30px 30px;
     }
     @include media-breakpoint-up(xs-450) {
-      width: 70%;
+      max-width: 70%;
       margin: auto;
     }
     position: relative;
     @include media-breakpoint-up(md) {
-      width: auto;
+      max-width: 300px;
       min-height: 210px;
       padding: 8px 0;
+      margin: 0;
     }
     @include media-breakpoint-up(xl) {
       min-height: 200px;
@@ -32,8 +34,9 @@
         @include line-height(22px);
       }
     }
+    // banner card buttons
     .btn-secondary {
-        width: 75%;
+      width: 75%;
       @include media-breakpoint-up(lg) {
         width: 85%;
       }
@@ -47,10 +50,14 @@
       h5 {
         + p {
           padding-left: 25px;
+          margin: 0 auto;
           @include media-breakpoint-up(md) {
             padding-left: 0;
           }
         }
+      }
+      p{
+        margin: 0 auto;
       }
       @include media-breakpoint-up(md) {
         margin-top: 8px;
@@ -59,7 +66,7 @@
     &.card-two {
       margin-top: 42px;
       padding: 13px 60px 18px 0;
-      @include media-breakpoint-up(lg) {
+      @include media-breakpoint-up(md) {
         margin-top: 8px;
         padding: 13px 85px 18px 25px;
       }
@@ -68,7 +75,7 @@
       }
       p {
         letter-spacing: 0;
-        @include media-breakpoint-up(lg) {
+        @include media-breakpoint-up(md) {
           @include line-height(22px);
         }
       }
@@ -79,6 +86,11 @@
         right: 16px;
         top: 4px;
         width: 44px;
+        @include media-breakpoint-up(md) {
+          height: 125px;
+          top: 15px;
+          width: 60px;
+        }
         @include media-breakpoint-up(lg) {
           height: 142px;
           right: 20px;
@@ -103,7 +115,10 @@
   @include media-breakpoint-up(xxl) {
     padding: 42px 554px 500px 125px;
   }
-  background-image: linear-gradient($blue-600, $blue-700, $blue-500);
+  @include media-breakpoint-up(xxl-1600) {
+    padding: 42px 50% 500px 125px;
+  }
+  background-image: linear-gradient($blue-600, $blue-700, $blue-500, $white);
   h3 {
     font-size: 20px;
     @include font-size(20px);
@@ -129,7 +144,7 @@
   }
   .points-higher {
     padding: 0 28px 0 10px;
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(md) {
       margin-top: 16px;
       text-align: center;
       @include line-height(15px);
@@ -159,6 +174,7 @@
   }
 
   > .container {
+    z-index: 4;
     > div {
       @include media-breakpoint-up(lg) {
         margin: 0 100px 0 -9px;
@@ -227,9 +243,6 @@ section {
       .card {
         padding: 0;
         margin-bottom: 72px;
-        // .card-img-top {
-        //   height: 123px;
-        // }
         &-body {
           padding: 20px 4px 0;
           min-height: 216px;
