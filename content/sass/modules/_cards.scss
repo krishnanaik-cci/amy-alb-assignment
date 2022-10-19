@@ -2,11 +2,11 @@
   padding: 8px 15px;
   // main card
   &-primary {
-    margin-top: -142px;
+    margin-top: -98px;
     padding: 0 15px 62px;
     @include media-breakpoint-up(lg) {
-      margin-top: -350px;
-      padding: 8px 60px;
+      margin-top: -260px;
+      padding: 8px 62px;
     }
     @include radius(10px 10px 0 0);
     // card left border 
@@ -44,12 +44,13 @@
     h2 {
       margin: 25px 0 20px 0;
       @include media-breakpoint-up(lg) {
-        margin: 30px 0 45px 0;
+        margin: 28px 0 45px 0;
       }
     }
   }
   &-secondary {
     color: $white;
+    @include radius(6px);
     border: 2px solid $green;
     background-color: rgba(1, 43, 67, 0.85);
   }

@@ -1,4 +1,4 @@
-.redirect-icon{
+.redirect-icon {
   &::before {
     content: "";
     height: 15px;
@@ -8,7 +8,7 @@
     position: absolute;
     @include background(url(../images/style-images/icon-redirect.png) center/cover no-repeat);
   }
-  &-secondary{
+  &-secondary {
     &::after {
       content: "";
       height: 15px;
@@ -20,12 +20,16 @@
   }
 }
 
-.download-icon{
+.download-icon {
   position: relative;
   &::after {
     content: "";
     height: 15px;
     width: 15px;
+    @include media-breakpoint-up(xs-375) {
+      height: 20px;
+      width: 20px;
+    }
     margin: 3px 0 0 8px;
     position: absolute;
     @include background(url(../images/style-images/icon-download.png) center/cover no-repeat);

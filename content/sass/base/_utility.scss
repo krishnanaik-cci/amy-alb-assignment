@@ -11,17 +11,13 @@
   color: $blue-100 !important;
 }
 
+.text-blue-300{
+  color: $blue-300 !important;
+}
+
 // bg color utility
 .bg-gray-200 {
   background-color: $gray-200;
-}
-
-.bg-blue-100 {
-  background-color: $blue-100;
-}
-
-.bg-blue-500 {
-  background-color: $blue-500;
 }
 
 // font size utility
@@ -35,12 +31,6 @@
 
 .fs-14 {
   font-size: calculateRem(14px) !important;
-}
-
-.fs-lg-15 {
-  @include media-breakpoint-up(lg) {
-    font-size: calculateRem(15px) !important;
-  }
 }
 
 .fs-18 {
@@ -91,13 +81,17 @@
     @include line-height(15px);
   }
 }
-// padding utility
-.pl-29 {
-  padding-left: 29px;
+
+.pr-md-20{
+  @include media-breakpoint-up(md) {
+  padding-right: 20px !important;
+  }
 }
 
-.pl-35{
-  padding-left: 35px;
+.pl-md-20{
+  @include media-breakpoint-up(md) {
+  padding-left: 20px !important;
+  }
 }
 
 .pb-20 {
@@ -122,24 +116,8 @@
   }
 }
 
-.mb-ne-3 {
-  margin-bottom: -3px;
-}
-
-.mb-ne-10 {
-  margin-bottom: -10px;
-}
-
-.mt-43 {
-  margin-top: 43px;
-}
-
-.mb-10 {
-  margin-bottom: 10px;
-}
-
-.mb-23 {
-  margin-bottom: 23px;
+.mb-24 {
+  margin-bottom: 24px;
 }
 
 .mb-12 {

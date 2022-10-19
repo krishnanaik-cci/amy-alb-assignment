@@ -6,12 +6,12 @@ header {
     padding-left: 128px;
   }
   border-bottom: 3px solid $yellow-100;
-  // css for the links hwihc are above header
+  // css for the links which are above header
   .top-menu-links {
     padding: 2px 20px;
     background-color: $gray-200;
     @include media-breakpoint-up(lg) {
-      padding: 3px 0 2px 5px;
+      padding: 3px 0 5px 5px;
       margin: 11px 40px 0 28px;
       background-color: transparent;
     }
@@ -119,25 +119,43 @@ header {
         }
         &:not(.close-btn) {
           margin: 7px 16px 42px;
-          padding: 13px 18px 10px;
+          padding: 13px 22px 10px 0;
+          width: auto;
+          @include media-breakpoint-up(sm){
+            width: 54%;
+            margin: 7px auto 42px;
+          }
+          @include media-breakpoint-up(md){
+            width: 50%;
+          }
+          @include media-breakpoint-up(lg){
+            width: auto;
+          }
         }
       }
       .navbar {
         &-nav {
           padding: 13px 20px 29px;
           @include media-breakpoint-up(xs-375) {
-            padding: 13px 45px 29px;
+            padding: 13px 45px 26px;
+          }
+          @include media-breakpoint-up(sm){
+            padding: 10px 0 16px 0;
+            max-width: 400px;
+            margin: auto;
+          }
+          @include media-breakpoint-up(md){
+            max-width: 500px;
           }
           @include media-breakpoint-up(lg) {
-            padding: 10px 0 16px 0;
-            margin-right: 0;
+            max-width: none;
+            margin: 0;
           }
           @include media-breakpoint-up(xl) {
             padding: 10px 0 0 0;
-            margin-right: 0;
           }
           @include media-breakpoint-up(xxl) {
-            margin-right: 10px;
+            margin: 0 10px 0 0;
           }
           .nav-item {
             border-top: 1px solid $white;
@@ -150,7 +168,7 @@ header {
             }
             &:first-child {
               .nav-link {
-                padding: 19px 0 20px;
+                padding: 19px 0 12px;
                 @include media-breakpoint-up(lg) {
                   padding: 16px 0 0;
                 }
@@ -161,7 +179,7 @@ header {
               font-weight: bold;
               color: $white;
               border-bottom: 2px solid transparent;
-              padding: 19px 0 8px;
+              padding: 17px 0 8px;
               @include media-breakpoint-up(lg) {
                 color: $blue-100;
                 padding: 16px 0 0;
@@ -257,10 +275,22 @@ header {
                 }
               }
             }
+            &:last-child {
+              border-bottom: 1px solid $white;
+            }
           }
         }
         &-brand {
           padding: 35px 17px 23px 0;
+        }
+      }
+      a.download-icon {
+        &::after {
+          top: 8px;
+          right: 20px;
+          @include media-breakpoint-up(xs-375){
+          right: 25px;
+          }
         }
       }
       a {

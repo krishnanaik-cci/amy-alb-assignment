@@ -1,12 +1,24 @@
 .modal {
   .modal-dialog {
     .modal-content {
-      @include radius(10px);
+      @include radius(25px);
       .modal-body {
-        padding: 15px 30px;
+        padding: 15px 10px;
+        @include media-breakpoint-up(xs-375) {
+          padding: 15px 30px;
+        }
         ul {
           &.list li {
             margin-bottom: 20px;
+          }
+        }
+        p,
+        li {
+          @include font-size(21px);
+          @include line-height(25px);
+          @include media-breakpoint-up(lg) {
+            @include font-size(24px);
+            @include line-height(29px);
           }
         }
       }
@@ -15,7 +27,7 @@
   button.close {
     font-weight: lighter;
     color: $yellow-200;
-    padding: 15px 20px 0;
+    padding: 15px 25px 0px;
     @include font-size(35px);
   }
 }

@@ -1,7 +1,10 @@
 .banner {
   overflow: hidden;
   .card-secondary {
-    max-width: 95%;
+    max-width: 100%;
+    @include media-breakpoint-up(xs-375){
+      max-width: 95%;
+    }
     z-index: 2;
     padding: 8px 0 30px;
     @include media-breakpoint-up(sm) {
@@ -36,17 +39,25 @@
     }
     // banner card buttons
     .btn-secondary {
-      width: 75%;
+      width: 68%;
       @include media-breakpoint-up(lg) {
         width: 85%;
       }
       position: absolute;
       bottom: -25px;
       left: 50%;
-      padding: 13px 10px 10px;
+      padding: 10px 0 8px;
+      @include media-breakpoint-up(xs-375){
+        padding: 10px 10px 8px;
+      
+      }
       @include transform(translateX(-50%));
     }
     &.card-one {
+      padding: 11px 0 20px;
+      @include media-breakpoint-up(lg) {
+        padding: 17px 0 23px;
+      }
       h5 {
         + p {
           padding-left: 25px;
@@ -56,7 +67,7 @@
           }
         }
       }
-      p{
+      p {
         margin: 0 auto;
       }
       @include media-breakpoint-up(md) {
@@ -65,10 +76,13 @@
     }
     &.card-two {
       margin-top: 42px;
-      padding: 13px 60px 18px 0;
+      padding: 13px 60px 16px 0;
       @include media-breakpoint-up(md) {
         margin-top: 8px;
         padding: 13px 85px 18px 25px;
+      }
+      @include media-breakpoint-up(lg) {
+        padding: 15px 85px 18px 16px;
       }
       h5 {
         margin-bottom: 0;
@@ -109,7 +123,7 @@
     padding: 42px 246px 500px 50px;
   }
   @include media-breakpoint-up(xl) {
-    height: 1158px;
+    height: 1074px;
     padding: 42px 360px 500px 125px;
   }
   @include media-breakpoint-up(xxl) {
@@ -150,6 +164,9 @@
       @include line-height(15px);
       letter-spacing: 0.8px;
       padding: 0 15px;
+    }
+    @include media-breakpoint-up(lg) {
+      margin-top: 19px;
     }
   }
 
@@ -197,7 +214,7 @@
     top: 26%;
     left: 50%;
     transform: translateX(-50%);
-    @include background(url(../images/content-images/neuron.png) no-repeat 49% -11px/700px);
+    @include background(url(../images/content-images/neuron.png) no-repeat 49% 0/700px);
     @include media-breakpoint-up(md) {
       height: 100%;
       top: 35%;
@@ -209,7 +226,7 @@
     }
     @include media-breakpoint-up(xl) {
       top: 24%;
-      @include background(url(../images/content-images/neuron.png) no-repeat -245px -13px/1100px);
+      @include background(url(../images/content-images/neuron.png) no-repeat -245px 13px/1100px);
     }
   }
   &::after {
@@ -219,11 +236,11 @@
     height: 673px;
     top: 50%;
     left: -5px;
-    @include background(url(../images/content-images/couple.png) center/cover no-repeat);
-    @include media-breakpoint-up(xs) {
+    @include background(url(../images/content-images/couple.png) no-repeat -38px 25px /439px);
+    @include media-breakpoint-up(xs-385) {
       left: 50%;
       @include transform(translateX(-50%));
-      background-size: contain;
+      @include background(url(../images/content-images/couple.png) center/contain no-repeat);
     }
     @include media-breakpoint-up(lg) {
       width: 775px;
@@ -232,7 +249,6 @@
       left: auto;
       right: -108px;
       @include transform(none);
-      @include background(url(../images/content-images/couple-desktop.png) center/cover no-repeat);
     }
   }
 }
@@ -243,14 +259,20 @@ section {
       .card {
         padding: 0;
         margin-bottom: 72px;
+        @include media-breakpoint-up(lg) {
+          margin-bottom: 68px;
+        }
+        .card-img-top {
+          width: 95%;
+        }
         &-body {
           padding: 20px 4px 0;
           min-height: 216px;
           @include media-breakpoint-up(lg) {
-            min-height: 230px;
+            min-height: 280px;
           }
           @include media-breakpoint-up(xl) {
-            min-height: 265px;
+            min-height: 230px;
           }
           h5 {
             font-weight: bold;
@@ -261,6 +283,9 @@ section {
               @include line-height(24px);
             }
             margin: 10px 0 14px;
+            @include media-breakpoint-up(lg) {
+              margin: 8px 0 14px;
+            }
           }
           p {
             margin-bottom: 15px;
@@ -268,14 +293,26 @@ section {
         }
         &-footer {
           .btn-primary {
-            padding: 12px 62px 10px;
-            @include media-breakpoint-up(md) {
-              padding: 12px 32px 10px;
+            padding: 12px 40px 10px;
+            @include media-breakpoint-up(xs-375){
+              padding: 12px 62px 10px;
             }
+            @include media-breakpoint-up(md) {
+              padding: 10px 42px 8px;
+            }
+            @include media-breakpoint-up(lg) {
+              padding: 10px 38px 8px;
+            }
+            // @include media-breakpoint-up(xl) {
+            //   padding: 10px 42px 8px;
+            // }
             &.learn-more-about-act {
-              padding: 12px 40px 10px;
+              padding: 12px 20px 10px;
+              @include media-breakpoint-up(xs-375){
+                padding: 12px 40px 10px;
+              }
               @include media-breakpoint-up(md) {
-                padding: 12px 16px 10px;
+                padding: 10px 20px 8px;
               }
             }
           }
@@ -285,22 +322,16 @@ section {
         padding: 0 20px;
         .card-body {
           @include media-breakpoint-up(lg) {
-            padding: 20px 0;
+            padding: 10px 0;
           }
-        }
-        @include media-breakpoint-up(lg) {
-          padding-right: 28px;
         }
       }
       .col-two {
         padding: 0 20px;
         .card-body {
           @include media-breakpoint-up(lg) {
-            padding: 20px 0px;
+            padding: 17px 0px;
           }
-        }
-        @include media-breakpoint-up(lg) {
-          padding: 0 22px;
         }
       }
       .col-three {
@@ -311,26 +342,20 @@ section {
             min-height: 206px;
             @include media-breakpoint-up(lg) {
               min-height: 280px;
-              padding: 20px 10px;
+              padding: 12px 10px;
             }
             @include media-breakpoint-up(xl) {
               min-height: 230px;
             }
-            @include media-breakpoint-up(xxl) {
-              min-height: 265px;
-            }
           }
-        }
-        @include media-breakpoint-up(lg) {
-          padding-left: 28px;
         }
       }
     }
 
     .border-t-b-botted {
-      padding: 38px 10px 30px;
+      padding: 38px 10px 34px;
       @include media-breakpoint-up(lg) {
-        padding: 42px 10px 36px;
+        padding: 44px 10px 40px;
       }
       margin-bottom: 77px;
       @include media-breakpoint-up(lg) {
@@ -349,18 +374,7 @@ section {
         @include line-height(24px);
       }
       .btn-secondary {
-        padding: 13px 68px 10px;
-      }
-    }
-
-    form {
-      button[type="submit"] {
-        padding: 13px 100px 10px;
-        margin: 0 0 30px;
-        @include media-breakpoint-up(lg) {
-          padding: 13px 45px 10px;
-          margin: 10px 0 45px;
-        }
+        padding: 10px 68px 8px;
       }
     }
   }
@@ -369,7 +383,6 @@ section {
     margin-top: 0;
     padding: 47px 27px 20px;
     @include media-breakpoint-up(lg) {
-      margin-top: 62px;
       padding: 40px 135px 16px;
     }
     p {
@@ -384,5 +397,11 @@ section {
     padding: 10px;
     margin-bottom: 10px;
     border: 2px solid $blue-100;
+    a.text-blue-100 {
+      overflow-wrap: break-word;
+    }
+  }
+  .list-content-wrapper {
+    padding: 0 12px;
   }
 }

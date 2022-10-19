@@ -3,7 +3,7 @@ h1 {
     color: $blue-100;
     font-weight: bold;
     @include font-size(28px);
-    @include line-height(32px);
+    @include line-height(30px);
     @include media-breakpoint-up(md) {
         @include font-size(52px);
         @include line-height(54px);
@@ -15,7 +15,7 @@ h2 {
     @include line-height(28px);
     @include media-breakpoint-up(md) {
         @include font-size(32px);
-        @include line-height(38px);
+        @include line-height(36px);
     }
 }
 

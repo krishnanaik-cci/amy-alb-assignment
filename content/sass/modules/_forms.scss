@@ -1,12 +1,14 @@
 form {
   label {
     margin-bottom: 23px;
-    text-transform: capitalize;
-    @include font-size(18px);
-    @include line-height(24px);
+    @include font-size(16px);
+    @include line-height(20px);
+    @include media-breakpoint-up(lg) {
+      @include font-size(18px);
+      @include line-height(24px);
+    }
   }
-  .form-control,
-  .custom-select {
+  .form-control{
     height: 42px;
     @include radius(0);
     border: 1px solid $blue-500;
@@ -23,6 +25,11 @@ form {
       @include line-height(17px);
       color: $blue-100;
       margin-left: 35px;
+      @include media-breakpoint-up(lg){
+        margin-left: 42px;
+        @include font-size(18px);
+        @include line-height(24px);
+      }
       &:hover {
         cursor: pointer;
       }
@@ -57,9 +64,6 @@ form {
         border: 0;
       }
     }
-    .form-control + .form-control {
-      margin-top: 16px;
-    }
     // checkbox validation css
     .invalid-feedback {
       text-align: left;
@@ -75,7 +79,7 @@ form {
   .form-captcha {
     margin: 20px 0 20px;
     @include media-breakpoint-up(lg) {
-      margin: 31px 0 20px;
+      margin: 33px 0 0px;
     }
     label {
       margin-bottom: 12px;
@@ -104,6 +108,19 @@ form {
       }
     }
   }
+
+  // submit button css
+  button[type="submit"] {
+    margin: 0 0 30px;
+    padding: 13px 100px 10px;
+    @include media-breakpoint-up(xs-385){
+      padding: 13px 50px 10px;
+    }
+    @include media-breakpoint-up(lg) {
+      margin: 10px 0 45px;
+      padding: 13px 45px 10px;
+    }
+  }
 }
 
 // select2 styling
@@ -113,7 +130,7 @@ form {
       height: 42px;
       border-radius: 0;
       border: 1px solid $blue-500;
-      &:focus{
+      &:focus {
         @include box-shadow(0 0 0 0.2rem rgba(65, 182, 230, 0.25));
       }
       .select2-selection__rendered {
@@ -126,11 +143,11 @@ form {
         b {
           border-color: $blue-400 transparent transparent transparent;
           border-style: solid;
-          border-width: 8px 8px 0 8px;
-          margin: -2px 0 0 -10px;
+          border-width: 12px 12px 0 12px;
+          margin: -2px 0px 0 -10px;
           right: 35%;
-          top: 45%;
-          left: auto;
+          top: 40%;
+          left: -8px;
         }
       }
     }
@@ -143,7 +160,7 @@ form {
       .select2-selection__arrow {
         b {
           border-color: transparent transparent $blue-400 $white !important;
-          border-width: 0 8px 8px 8px !important;
+          border-width: 0 12px 12px 12px !important;
         }
       }
     }

@@ -1,28 +1,30 @@
+// hides the scrolling of the page when menu is opend on small screen
 .page-scroll-disable {
   overflow: hidden;
 }
-
 .inner-container {
-  max-width: 865px;
+  max-width: 885px;
   margin: 2px auto;
   @include media-breakpoint-up(lg) {
     margin: 0 auto 35px;
   }
   p {
     &.small-text {
-      color: $blue-300;
-      @include line-height(20px);
-      @include font-size(13px);
       padding: 0px 4px;
-      margin-bottom: 0;
-      margin-top: 1px;
+      @include font-size(13px);
+      @include line-height(19px);
+      margin: 1px 0 0;
       letter-spacing: 0.2px;
       &:nth-child(2) {
-        margin-bottom: 72px;
+        margin-bottom: 70px;
+        @include media-breakpoint-up(lg) {
+          margin-bottom: 72px;
+        }
       }
       @include media-breakpoint-up(lg) {
-        @include font-size(14px);
         padding: 0px;
+        @include font-size(14px);
+        @include line-height(20px);
       }
     }
   }
@@ -31,11 +33,13 @@
   }
 }
 
+// dotted border
 .border-t-b-botted {
   border-top: 2px dotted $gray-100;
   border-bottom: 2px dotted $gray-100;
 }
 
+// dotted border bottom
 .border-t-botted {
   border-top: 2px dotted $gray-100;
 }
