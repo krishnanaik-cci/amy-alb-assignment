@@ -24,10 +24,12 @@
   <link rel="stylesheet" href="./content/css/styles.min.css" />
   <!-- / custom stylesheet -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="./content/css/select2.min.css" rel="stylesheet" />
   <link rel="stylesheet" media="all" href="https://use.typekit.net/yrx1oyi.css" />
 </head>
 <body>
   <header>
+    <!-- links present above header -->
     <div class="top-menu-links text-right">
       <span>
         <a href="javascript:void(0)" class="pl-0" data-toggle="modal" data-target="#important-safety-info">Important
@@ -48,7 +50,7 @@
         <span class="mt-2"></span>
       </button>
       <div class="collapse navbar-collapse  d-block w-100 text-center" id="navbarNavDropdown">
-        <button class="btn btn-secondary rounded-circle close-btn d-lg-none" data-toggle="collapse"
+        <button type="button" class="btn btn-secondary rounded-circle close-btn d-lg-none" data-toggle="collapse"
           data-target="#navbarNavDropdown">&times;</button>
         <a class="navbar-brand m-0 d-lg-none" href="javascript:void(0)"><img
             src="./content/images/style-images/albrioza-white-logo.png" /></a>
@@ -83,7 +85,8 @@
           </li>
         </ul>
         <p class="text-white mb-0 d-lg-none">Get patients started today</p>
-        <a class="nav-link btn btn-secondary position-relative d-lg-none download-icon" href="javascript:void(0)">Download enrolment
+        <a class="nav-link btn btn-secondary position-relative d-lg-none download-icon"
+          href="javascript:void(0)">Download enrolment
           Form</a>
         <a href="javascript:void(0)"
           class="redirect-icon-secondary text-white redirect-link d-lg-none position-relative fs-12">ACT Support
@@ -92,54 +95,52 @@
     </nav>
   </header>
   <main>
+    <!-- banner section -->
     <section class="banner position-relative">
       <div class="container text-white position-relative">
-        <h3 class="text-yellow text-uppercase">Introducing</h3>
+        <div>
+        <h3 class="text-yellow text-uppercase font-weight-bold">Introducing</h3>
         <h1 class="text-white">ALBRIOZA<sup>TM</sup>: Demonstrated to slow the loss of function in ALS<sup>1†</sup></h1>
-        <p class="font-wight-bold pl-lg-1 pr-lg-4 mb-lg-3">ALBRIOZA ± SOC significantly slowed disease progression vs.
-          placebo ± SOC over 24 weeks (as measured by rate
-          of decline in ALSFRS-R; P=0.03).<sup>1†</sup></p>
-        <div class="row row-cols-1 row-cols-md-2">
+        <p class="font-weight-bold pl-lg-1 pr-lg-4 mb-lg-3">ALBRIOZA ± SOC significantly slowed disease progression vs.
+          placebo ± SOC over 24 weeks (as measured by rate of decline in ALSFRS-R; <i>P</i>=0.03).<sup>1†</sup></p>
+        <div class="row row-cols-1 row-cols-md-2 banner-card-wrapper">
           <div class="col pr-lg-0">
             <div class="card card-secondary card-one">
               <h5 class="font-weight-bold text-center mb-0">MEAN ALSFRS-R SCORE WAS</h5>
               <p class="text-green fs-40 fs-md-65 pt-md-18 d-flex flex-md-column align-items-center mb-0">
                 <span>2.32</span>
-                <span class="text-uppercase fs-14 points-higher line-height-17">points higher <br
-                    class="d-block d-md-none">with <br class="d-none d-md-block">ALBRIOZA <span
-                    class="d-none d-md-inline">± SOC <br class="d-none d-md-block">vs. placebo ± SOC</span>
+                <span class="text-uppercase fs-14 points-higher line-height-17">points higher 
+                  <br class="d-block d-md-none">with <br class="d-none d-md-block">ALBRIOZA 
+                  <span class="d-none d-md-inline">± SOC <br class="d-none d-md-block">vs. placebo ± SOC</span>
                 </span>
               </p>
               <!-- this line hides on medium screen -->
-              <p class="text-green text-uppercase d-block d-md-none fs-14 line-height-17 mb-0">± SOC vs.
-                placebo ± SOC</p>
+              <p class="text-green text-uppercase d-block d-md-none fs-14 line-height-17 mb-0">± SOC vs. placebo ± SOC</p>
               <p class="fs-12 line-height-18 text-center after-24-weeks mb-0">after 24 weeks of treatment<br
-                  class="d-none d-md-block">
-                (P=0.03).1<sup>†‡</sup></p>
-              <button class="btn btn-secondary position-absolute">Discover the data</button>
+                  class="d-none d-md-block">(P=0.03).1<sup>†‡</sup></p>
+              <a href="javascript:void(0)" class="btn btn-secondary position-absolute">Discover the data</a>
             </div>
           </div>
           <div class="col pr-lg-0">
             <div class="card card-secondary card-two text-center">
               <h5 class="font-weight-bold">A FLEXIBLE ORAL <br>SUSPENSION</h5>
-              <p>that can be <br class="d-none d-md-block">administered <br>by mouth or <br
-                  class="d-none d-md-block">feeding tube1</p>
-              <button class="btn btn-secondary position-absolute">LEARN ABOUT DOSING</button>
+              <p>that can be <br class="d-none d-md-block">administered <br>by mouth or 
+                <br class="d-none d-md-block">feeding tube1</p>
+              <a href="javascript:void(0)" class="btn btn-secondary position-absolute">LEARN ABOUT DOSING</a>
             </div>
           </div>
         </div>
         <div class="about-albrioza d-none d-lg-block">
           <p class="d-none d-lg-block mb-2">ALBRIOZA (sodium phenylbutyrate and ursodoxicoltaurine) is indicated for the
-            treatment of patients with
-            amyotrophic lateral sclerosis (ALS).</p>
+            treatment of patients with amyotrophic lateral sclerosis (ALS).</p>
           <p>ALBRIOZA has been issued marketing authorization with conditions, pending the results of trials to verify
-            its
-            clinical benefit. Patients should be advised of the nature of the authorization. For further information for
+            its clinical benefit. Patients should be advised of the nature of the authorization. For further information for
             ALBRIOZA, please refer to Health Canada’s Notice of Compliance with conditions - drug products web site:
             <a href="https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/notice-compliance/conditions.html"
               class="text-white">https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/notice-compliance/conditions.html</a>
           </p>
         </div>
+      </div>
       </div>
       <div class="enroll-your-patients border-top-0">
         <a href="javascript:void(0)" class="text-white text-decoration-none">Enroll your Patients</a>
@@ -148,8 +149,7 @@
     <section class="als-treatment-plan">
       <div class="container position-relative">
         <div class="card bg-white border-bottom-0 card-primary">
-          <h2 class="text-uppercase font-weight-bold text-center">A new therapy for your foundational ALS treatment
-            plan</h2>
+          <h2 class="text-uppercase font-weight-bold text-center">A new therapy for your foundational ALS treatment plan</h2>
           <div class="row">
             <div class="col-lg-4 col-one">
               <div class="card border-0">
@@ -157,10 +157,8 @@
                   alt="Proven to provide functional benefits">
                 <div class="card-body">
                   <h5 class="font-wight-bold text-center">PROVEN TO PROVIDE <br>FUNCTIONAL BENEFITS</h5>
-                  <p class="text-left mb-0">In the CENTAUR trial, ALBRIOZA ± SOC significantly slowed disease
-                    progression vs.
-                    placebo ± SOC over
-                    24 weeks (as measured by rate of decline in ALSFRS-R; P=0.03).1<sup>†‡</sup></p>
+                  <p class="text-left mb-0">In the CENTAUR trial, ALBRIOZA ± SOC significantly slowed disease progression vs.
+                    placebo ± SOC over 24 weeks (as measured by rate of decline in ALSFRS-R; P=0.03).<sup>1†‡</sup></p>
                 </div>
                 <div class="card-footer border-0 bg-transparent p-0 text-center">
                   <a href="javascript:void(0)" class="btn btn-primary">EXPLORE EFFICACY</a>
@@ -173,11 +171,9 @@
                   alt="Proven to provide functional benefits">
                 <div class="card-body">
                   <h5 class="font-wight-bold text-center">DEMONSTRATED <br>SAFETY PROFILE</h5>
-                  <p class="text-left mb-3 mb-lg-0">ALBRIOZA was generally well-tolerated in the pivotal clinical trial.
-                    The most
-                    common AEs were mainly
-                    gastrointestinal-related and occurred most often during the first
-                    3 weeks of therapy.1§</p>
+                  <p class="text-left mb-3 mb-lg-0">ALBRIOZA was generally well-tolerated in the pivotal clinical trial. 
+                    The most common AEs were mainly gastrointestinal-related and occurred most often during the first
+                    3 weeks of therapy.<sup>1§</sup></p>
                 </div>
                 <div class="card-footer border-0 bg-transparent p-0 text-center">
                   <a href="javascript:void(0)" class="btn btn-primary">SEE SAFETY PROFILE</a>
@@ -202,29 +198,28 @@
           </div>
           <div class="inner-container text-blue-300">
             <p class="small-text">
-              <sup>†</sup>The efficacy of ALBRIOZA was assessed in a 24-week, multicenter, randomized, double-blind,
+              † The efficacy of ALBRIOZA was assessed in a 24-week, multicenter, randomized, double-blind,
               placebo-controlled, parallel-group study of patients with familial or sporadic ALS. 137 patients were
               randomized 2:1 to receive ALBRIOZA or placebo. The primary efficacy endpoint was a comparison of the rate
               (slope) of reduction in total scores between ALBRIOZA plus SOC vs. SOC alone from baseline to Week 24 in
-              the mITT population.1
+              the mITT population.<sup>1</sup>
             </p>
             <p class="small-text">
-              <sup>‡</sup>The average baseline ALSFRS-R total score was 35.7 (5.78) in the ALBRIOZA treatment group and
-              36.7
-              (5.08) in the placebo group.1 <br>§ The most common AEs (≥10%) observed in the ALBRIOZA group were diarrhea
-              (18%) and abdominal pain (10%).<sup>1</sup><br>
+              ‡ The average baseline ALSFRS-R total score was 35.7 (5.78) in the ALBRIOZA treatment group and
+              36.7 (5.08) in the placebo group.<sup>1</sup> <br>§ The most common AEs (≥10%) observed in the ALBRIOZA
+              group were diarrhea
+              (18%) and <br class="d-lg-none">abdominal pain (10%).<sup>1</sup><br>
               AE: adverse event; ALS: amyotrophic lateral sclerosis; ALSFRS-R: ALS Functional Rating Scale-Revised; SOC:
               standard of care therapies.
             </p>
             <div class="text-center border-t-b-botted">
-              <h3 class="font-weight-bold fs-22 line-height-36">Establishing clear treatment expectations <br
-                  class="d-none d-md-block d-lg-none">with your
-                patients can be important</h3>
-              <button class="btn btn-secondary">LEARN MORE</button>
+              <h3 class="font-weight-bold fs-22 line-height-36">Establishing clear treatment expectations 
+                <br class="d-none d-md-block d-lg-none">with your patients can be important</h3>
+                <a href="javascript:void(0)" class="btn btn-secondary">LEARN MORE</a>
             </div>
             <h3>Get Connected</h3>
-            <p class="mb-4 mb-lg-0 pr-3 pr-md-0">Fill out the form below to stay informed and receive the latest information on
-              ALBRIOZA.</p>
+            <p class="mb-4 mb-lg-0 pr-3 pr-md-0">Fill out the form below to stay informed and receive the latest
+              information on ALBRIOZA.</p>
             <p class="fs-14 mb-4 mb-lg-19">* Required fields</p>
             <form class="needs-validation" autocomplete="off" novalidate>
               <div class="form-row">
@@ -337,11 +332,12 @@
               <div class="text-center">
                 <button class="btn btn-primary" type="submit">Submit</button>
               </div>
-              <p class="fs-14 fs-lg-18 line-height-17 line-height-lg-24">By clicking SUBMIT, you confirm that you have
-                read Amylyx’s <a href="javascript:void(0)" class="text-blue-100 text-decoration-underline"><u>Privacy
-                    Policy</u></a> and that you agree to receive
-                the electronic communications from Amylyx that you’ve selected. You can withdraw your consent at any
-                time.
+              <p class="fs-14 fs-lg-18 line-height-17 line-height-lg-24">By clicking SUBMIT, you confirm that you have read Amylyx’s 
+              <a href="javascript:void(0)" class="text-blue-100 text-decoration-underline">
+                <u>Privacy Policy</u>
+              </a> 
+              and that you agree to receive the electronic communications from Amylyx that you’ve selected. 
+              You can withdraw your consent at any time.
               </p>
             </form>
           </div>
@@ -360,10 +356,8 @@
         <div class="col-lg-7 order-2 order-lg-1 col-one">
           <img src="./content/images/style-images/amylyx-logo-footer.png" alt="logo" />
           <p class="text-left">©2022 Amylyx Pharmaceuticals, Inc. All Rights Reserved. AMYLYX®, the AMYLYX® logo,
-            ALBRIOZATM, the
-            ALBRIOZATM logo, AMYLYX CARE TEAM (ACT)TM, and the AMYLYX CARE TEAM (ACT)TM logo are trademarks of Amylyx
-            Pharmaceuticals, Inc. PM-00133 10/22
-            This site is intended for Canadian Healthcare Professionals. </p>
+            ALBRIOZATM, the ALBRIOZATM logo, AMYLYX CARE TEAM (ACT)TM, and the AMYLYX CARE TEAM (ACT)TM logo are trademarks of Amylyx
+            Pharmaceuticals, Inc. PM-00133 10/22 This site is intended for Canadian Healthcare Professionals. </p>
         </div>
         <div class="col-lg-5 order-1 order-lg-2 col-two">
           <p class="mb-2">Get patients started today</p>
@@ -379,7 +373,6 @@
     </div>
   </footer>
   <!-- popup modal -->
-  <!-- Modal -->
   <div class="modal fade" id="important-safety-info" tabindex="-1" aria-labelledby="importantSafetyInfo"
     aria-hidden="true">
     <div class="modal-dialog modal-xl">
@@ -407,9 +400,8 @@
           <div class="list-content-wrapper">
             <p>ALBRIOZA (sodium phenylbutyrate and ursodoxicoltaurine) is indicated for the treatment of patients with
               amyotrophic lateral sclerosis (ALS).</p>
-
-            <p>Please consult the <a href="javascript:void(0)" class="text-blue-100"><u>ALBRIOZA Product
-                  Monograph</u></a> or <a href="javascript:void(0)" class="text-blue-100"><u>click here</u></a> for more
+            <p>Please consult the <a href="javascript:void(0)" class="text-blue-100">
+              <u>ALBRIOZA Product Monograph</u></a> or <a href="javascript:void(0)" class="text-blue-100"><u>click here</u></a> for more
               information on:</p>
             <ul class="list">
               <li>Contraindications in patients with hypersensitivity to this drug, bile salts, or to any ingredient in
@@ -426,21 +418,22 @@
               </li>
             </ul>
             <p>
-              The <a href="javascript:void(0)" class="text-blue-100"><u>Product Monograph</u></a> is also available by calling us at 1-877-374-1208.
+              The <a href="javascript:void(0)" class="text-blue-100"><u>Product Monograph</u></a> is also available by
+              calling us at 1-877-374-1208.
             </p>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- / popup modal -->
-  <!-- jquery cdn -->
+  <!-- jquery.min.js -->
   <script src="./content/scripts/jquery.min.js"></script>
-  <!-- / jquery cdn -->
-  <script src="./content/scripts/script.min.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <!-- select2.min.js -->
+  <script src="./content/scripts/select2.min.js"></script>
+  <!-- bootstrap.min.js -->
   <script src="./content/scripts/bootstrap.min.js"></script>
+  <!-- custom script.min.js -->
+  <script src="./content/scripts/script.min.js"></script>
 </body>
 
 </html>

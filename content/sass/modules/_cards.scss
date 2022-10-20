@@ -1,7 +1,12 @@
 .card {
+  border: 0;
   padding: 8px 15px;
   // main card
   &-primary {
+    @include multiple-box-shadow(-30px 25px 6px -30px $gray-400, 40px 35px 6px -40px $gray-400);
+    @include media-breakpoint-up(lg) {
+      @include multiple-box-shadow(-30px 3px 6px -30px $gray-400, 40px 3px 6px -40px $gray-400);
+    }
     margin-top: -98px;
     padding: 0 15px 62px;
     @include media-breakpoint-up(lg) {
@@ -9,19 +14,21 @@
       padding: 8px 62px;
     }
     @include radius(10px 10px 0 0);
-    // card left border 
+    // card left border
     &::before {
       content: "";
       position: absolute;
       border: 1px solid $white;
-      left: -1px;
-      height: 18%;
-      bottom: 50%;
+      left: -5px;
+      height: 15%;
+      bottom: 53.4%;
+      width: 8px;
+      background-color: $white;
       @include media-breakpoint-up(md) {
         bottom: 30%;
-        height: 54%;
       }
       @include media-breakpoint-up(lg) {
+        height: 54%;
         bottom: 0;
       }
     }
@@ -30,9 +37,11 @@
       content: "";
       position: absolute;
       border: 1px solid $white;
-      right: -1px;
-      height: 18%;
-      bottom: 50%;
+      right: -6px;
+      height: 15%;
+      bottom: 53.4%;
+      width: 8px;
+      background-color: $white;
       @include media-breakpoint-up(md) {
         bottom: 30%;
       }

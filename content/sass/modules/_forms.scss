@@ -68,6 +68,9 @@ form {
     .invalid-feedback {
       text-align: left;
       margin-left: 35px;
+      @include media-breakpoint-up(lg){
+        margin-left: 42px;
+      }
     }
     .form-check-input {
       &:invalid ~ .form-check-label {

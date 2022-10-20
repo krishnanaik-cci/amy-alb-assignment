@@ -1,7 +1,7 @@
 .modal {
   .modal-dialog {
     .modal-content {
-      @include radius(25px);
+      @include radius(24px);
       .modal-body {
         padding: 15px 10px;
         @include media-breakpoint-up(xs-375) {
@@ -20,6 +20,17 @@
             @include font-size(24px);
             @include line-height(29px);
           }
+        }
+        .modal-about-albrioza {
+          padding: 10px;
+          margin-bottom: 10px;
+          border: 2px solid $blue-100;
+          a.text-blue-100 {
+            overflow-wrap: break-word;
+          }
+        }
+        .list-content-wrapper {
+          padding: 0 12px;
         }
       }
     }

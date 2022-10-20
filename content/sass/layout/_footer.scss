@@ -56,6 +56,9 @@ footer {
     }
     p {
       @include media-breakpoint-up(lg) {
+        margin-left: 76px;
+      }
+      @include media-breakpoint-up(xl) {
         margin-left: 108px;
       }
     }
@@ -63,17 +66,18 @@ footer {
     .btn {
       @include font-size(14px);
       @include line-height(24px);
-      padding: 10px 34px 8px;
+      padding: 10px 30px 8px;
       @include media-breakpoint-up(xs-375) {
         padding: 10px 45px 8px;
       }
       @include media-breakpoint-up(lg) {
-        margin-left: 34px;
+        margin-left: 15px;
         @include font-size(16px);
         @include line-height(24px);
         padding: 10px 50px 8px 35px;
       }
       @include media-breakpoint-up(xl) {
+        margin-left: 34px;
         padding: 10px 64px 8px 35px;
       }
       // download icon css

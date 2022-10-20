@@ -14,10 +14,23 @@
     clip-path: $value;
 }
 
+@mixin text-shadow($value) {
+    text-shadow: $value;
+    -moz-text-shadow: $value;
+    -webkit-text-shadow: $value;
+}
+
+
 @mixin box-shadow($value) {
     box-shadow: $value;
     -moz-box-shadow: $value;
     -webkit-box-shadow: $value;
+}
+
+@mixin multiple-box-shadow($value, $value2) {
+    box-shadow: $value, $value2;
+    -moz-box-shadow: $value, $value2;
+    -webkit-box-shadow: $value, $value2;
 }
 @mixin rotate($deg) {
     transform: rotate($deg);

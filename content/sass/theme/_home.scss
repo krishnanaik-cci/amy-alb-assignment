@@ -2,7 +2,7 @@
   overflow: hidden;
   .card-secondary {
     max-width: 100%;
-    @include media-breakpoint-up(xs-375){
+    @include media-breakpoint-up(xs-375) {
       max-width: 95%;
     }
     z-index: 2;
@@ -22,6 +22,7 @@
       margin: 0;
     }
     @include media-breakpoint-up(xl) {
+      max-width: 268px;
       min-height: 200px;
       padding: 14px 0;
     }
@@ -40,6 +41,9 @@
     // banner card buttons
     .btn-secondary {
       width: 68%;
+      @include media-breakpoint-up(xs-450){
+        width: 75%;
+      }
       @include media-breakpoint-up(lg) {
         width: 85%;
       }
@@ -47,9 +51,8 @@
       bottom: -25px;
       left: 50%;
       padding: 10px 0 8px;
-      @include media-breakpoint-up(xs-375){
+      @include media-breakpoint-up(xs-375) {
         padding: 10px 10px 8px;
-      
       }
       @include transform(translateX(-50%));
     }
@@ -72,6 +75,9 @@
       }
       @include media-breakpoint-up(md) {
         margin-top: 8px;
+      }
+      @include media-breakpoint-up(xl){
+        margin-left: 4px;
       }
     }
     &.card-two {
@@ -120,19 +126,13 @@
     padding: 66px 5px 458px 25px;
   }
   @include media-breakpoint-up(lg) {
-    padding: 42px 246px 500px 50px;
+    padding: 42px 246px 238px 50px;
   }
   @include media-breakpoint-up(xl) {
     height: 1074px;
-    padding: 42px 360px 500px 125px;
+    padding: 42px 0 500px 0;
   }
-  @include media-breakpoint-up(xxl) {
-    padding: 42px 554px 500px 125px;
-  }
-  @include media-breakpoint-up(xxl-1600) {
-    padding: 42px 50% 500px 125px;
-  }
-  background-image: linear-gradient($blue-600, $blue-700, $blue-500, $white);
+  background-image: linear-gradient($blue-600, $blue-700 52%, $blue-500, $white);
   h3 {
     font-size: 20px;
     @include font-size(20px);
@@ -193,14 +193,27 @@
   > .container {
     z-index: 4;
     > div {
-      @include media-breakpoint-up(lg) {
-        margin: 0 100px 0 -9px;
+      @include media-breakpoint-up(lg){
+        max-width: 658px;
+        margin-left: 8%;
+        .about-albrioza {
+          border: 1px solid $white;
+          @include media-breakpoint-up(lg) {
+            margin: 46px 25px 0 4px;
+            padding: 9px 8px;
+            // to make banner text to appear clearly
+            p,a{
+              @include text-shadow(0 0 1px $black);
+            }
+          }
+        }
       }
-      &.about-albrioza {
-        border: 1px solid $white;
-        @include media-breakpoint-up(lg) {
-          margin: 46px 25px 0 4px;
-          padding: 9px 8px;
+      @include media-breakpoint-up(xl) {
+        margin-left: 5.4%;
+      }
+      .banner-card-wrapper{
+        @include media-breakpoint-up(lg){
+          padding-right: 112px;
         }
       }
     }
@@ -263,7 +276,9 @@ section {
           margin-bottom: 68px;
         }
         .card-img-top {
-          width: 95%;
+          @include media-breakpoint-up(lg) {
+            width: 95%;
+          }
         }
         &-body {
           padding: 20px 4px 0;
@@ -294,7 +309,7 @@ section {
         &-footer {
           .btn-primary {
             padding: 12px 40px 10px;
-            @include media-breakpoint-up(xs-375){
+            @include media-breakpoint-up(xs-375) {
               padding: 12px 62px 10px;
             }
             @include media-breakpoint-up(md) {
@@ -303,12 +318,9 @@ section {
             @include media-breakpoint-up(lg) {
               padding: 10px 38px 8px;
             }
-            // @include media-breakpoint-up(xl) {
-            //   padding: 10px 42px 8px;
-            // }
             &.learn-more-about-act {
               padding: 12px 20px 10px;
-              @include media-breakpoint-up(xs-375){
+              @include media-breakpoint-up(xs-375) {
                 padding: 12px 40px 10px;
               }
               @include media-breakpoint-up(md) {
@@ -389,19 +401,5 @@ section {
       @include font-size(14px);
       @include line-height(20px);
     }
-  }
-}
-
-.modal {
-  .modal-about-albrioza {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 2px solid $blue-100;
-    a.text-blue-100 {
-      overflow-wrap: break-word;
-    }
-  }
-  .list-content-wrapper {
-    padding: 0 12px;
   }
 }
