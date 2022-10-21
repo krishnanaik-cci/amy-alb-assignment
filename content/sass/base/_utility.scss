@@ -11,7 +11,7 @@
   color: $blue-100 !important;
 }
 
-.text-blue-300{
+.text-blue-300 {
   color: $blue-300 !important;
 }
 
@@ -47,14 +47,14 @@
   font-size: calculateRem(22px) !important;
 }
 
-.fs-40{
+.fs-40 {
   font-size: calculateRem(40px) !important;
 }
 
 .fs-md-65 {
-  @include media-breakpoint-up(md){
-  font-size: calculateRem(65px) !important;
-}
+  @include media-breakpoint-up(md) {
+    font-size: calculateRem(65px) !important;
+  }
 }
 
 // line height utility
@@ -82,15 +82,15 @@
   }
 }
 
-.pr-md-20{
+.pr-md-20 {
   @include media-breakpoint-up(md) {
-  padding-right: 20px !important;
+    padding-right: 20px !important;
   }
 }
 
-.pl-md-20{
+.pl-md-20 {
   @include media-breakpoint-up(md) {
-  padding-left: 20px !important;
+    padding-left: 20px !important;
   }
 }
 
@@ -116,16 +116,30 @@
   }
 }
 
+.mb-12 {
+  margin-bottom: 12px;
+}
+
 .mb-24 {
   margin-bottom: 24px;
 }
 
-.mb-12 {
-  margin-bottom: 12px;
+.mb-28 {
+  margin-bottom: 28px;
+}
+
+.mb-32 {
+  margin-bottom: 32px;
 }
 
 .mb-lg-19 {
   @include media-breakpoint-up(lg) {
     margin-bottom: 19px !important;
   }
+}
+
+.d-xs-450-none{
+@include media-breakpoint-up(xs-450){
+  display: none;
+}
 }

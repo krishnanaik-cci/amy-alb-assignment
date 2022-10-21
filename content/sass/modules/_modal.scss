@@ -1,16 +1,12 @@
 .modal {
   .modal-dialog {
     .modal-content {
-      @include radius(24px);
+      @include radius(25px);
+      border: 1px solid $gray-100;
       .modal-body {
         padding: 15px 10px;
         @include media-breakpoint-up(xs-375) {
-          padding: 15px 30px;
-        }
-        ul {
-          &.list li {
-            margin-bottom: 20px;
-          }
+          padding: 4px 24px 15px 24px;
         }
         p,
         li {
@@ -22,7 +18,7 @@
           }
         }
         .modal-about-albrioza {
-          padding: 10px;
+          padding: 17px 17px 0;
           margin-bottom: 10px;
           border: 2px solid $blue-100;
           a.text-blue-100 {
@@ -30,7 +26,19 @@
           }
         }
         .list-content-wrapper {
-          padding: 0 12px;
+          padding: 0 14px 0 16px;
+          @include media-breakpoint-up(lg) {
+            padding: 0 6px 0 18px;
+          }
+          .list {
+            margin-top: 25px;
+            @include media-breakpoint-up(lg) {
+              padding-left: 0;
+            }
+            li {
+              margin-bottom: 32px;
+            }
+          }
         }
       }
     }
@@ -38,7 +46,7 @@
   button.close {
     font-weight: lighter;
     color: $yellow-200;
-    padding: 15px 25px 0px;
+    padding: 20px 25px 10px;
     @include font-size(35px);
   }
 }

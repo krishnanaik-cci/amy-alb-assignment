@@ -41,7 +41,7 @@
     // banner card buttons
     .btn-secondary {
       width: 68%;
-      @include media-breakpoint-up(xs-450){
+      @include media-breakpoint-up(xs-450) {
         width: 75%;
       }
       @include media-breakpoint-up(lg) {
@@ -76,13 +76,13 @@
       @include media-breakpoint-up(md) {
         margin-top: 8px;
       }
-      @include media-breakpoint-up(xl){
+      @include media-breakpoint-up(xl) {
         margin-left: 4px;
       }
     }
     &.card-two {
       margin-top: 42px;
-      padding: 13px 60px 16px 0;
+      padding: 13px 60px 18px 0;
       @include media-breakpoint-up(md) {
         margin-top: 8px;
         padding: 13px 85px 18px 25px;
@@ -123,7 +123,7 @@
   }
   padding: 66px 0 500px 0;
   @include media-breakpoint-up(xs-375) {
-    padding: 66px 5px 458px 25px;
+    padding: 66px 5px 460px 25px;
   }
   @include media-breakpoint-up(lg) {
     padding: 42px 246px 238px 50px;
@@ -146,8 +146,22 @@
   }
   h1 {
     sup {
-      top: -1.8em;
-      font-size: 28%;
+      top: -0.5em;
+      font-size: 54%;
+      @include media-breakpoint-up(md){
+        top: -1.2em;
+        font-size: 35%;
+      }
+      @include media-breakpoint-up(lg) {
+        top: -1.6em;
+        font-size: 28%;
+        &:first-child{
+          left: -4px;
+        }
+        &:last-child{
+          left: 7px;
+        }
+      }
     }
     margin-bottom: 12px;
     @include line-height(30px);
@@ -193,7 +207,7 @@
   > .container {
     z-index: 4;
     > div {
-      @include media-breakpoint-up(lg){
+      @include media-breakpoint-up(lg) {
         max-width: 658px;
         margin-left: 8%;
         .about-albrioza {
@@ -202,7 +216,8 @@
             margin: 46px 25px 0 4px;
             padding: 9px 8px;
             // to make banner text to appear clearly
-            p,a{
+            p,
+            a {
               @include text-shadow(0 0 1px $black);
             }
           }
@@ -211,14 +226,14 @@
       @include media-breakpoint-up(xl) {
         margin-left: 5.4%;
       }
-      .banner-card-wrapper{
-        @include media-breakpoint-up(lg){
+      .banner-card-wrapper {
+        @include media-breakpoint-up(lg) {
           padding-right: 112px;
         }
       }
     }
   }
-
+  // neuron image
   &::before {
     content: "";
     position: absolute;
@@ -242,6 +257,7 @@
       @include background(url(../images/content-images/neuron.png) no-repeat -245px 13px/1100px);
     }
   }
+  // couple image
   &::after {
     content: "";
     position: absolute;
@@ -262,6 +278,7 @@
       left: auto;
       right: -108px;
       @include transform(none);
+      @include background(url(../images/content-images/couple-desktop.png) center/contain no-repeat);
     }
   }
 }
@@ -271,9 +288,13 @@ section {
     .card-primary {
       .card {
         padding: 0;
-        margin-bottom: 72px;
+        margin:  0 auto 72px;
+        @include media-breakpoint-up(xs-450) {
+          // margin: 0 auto 68px;
+          width: 75%;
+        }
         @include media-breakpoint-up(lg) {
-          margin-bottom: 68px;
+          width: auto;
         }
         .card-img-top {
           @include media-breakpoint-up(lg) {
@@ -287,6 +308,9 @@ section {
             min-height: 280px;
           }
           @include media-breakpoint-up(xl) {
+            min-height: 250px;
+          }
+          @include media-breakpoint-up(xxl){
             min-height: 230px;
           }
           h5 {
@@ -330,8 +354,23 @@ section {
           }
         }
       }
+      .card-img-holder {
+        height: 123px;
+        @include media-breakpoint-up(xs-385){
+          height: 160px;
+        }
+        @include media-breakpoint-up(md){
+          height: 200px;
+        }
+        @include media-breakpoint-up(lg){
+          height: 136px;
+        }
+      }
       .col-one {
         padding: 0 20px;
+        .card-img-holder {
+          @include background(url(../images/content-images/functional-benefits.png) center/cover no-repeat);
+        }
         .card-body {
           @include media-breakpoint-up(lg) {
             padding: 10px 0;
@@ -340,6 +379,9 @@ section {
       }
       .col-two {
         padding: 0 20px;
+        .card-img-holder {
+          @include background(url(../images/content-images/safety-profile.png) center/cover no-repeat);
+        }
         .card-body {
           @include media-breakpoint-up(lg) {
             padding: 17px 0px;
@@ -348,6 +390,9 @@ section {
       }
       .col-three {
         padding: 0 20px;
+        .card-img-holder {
+          @include background(url(../images/content-images/personalized-support.png) center/cover no-repeat);
+        }
         .card {
           margin-bottom: 68px;
           .card-body {
@@ -357,6 +402,9 @@ section {
               padding: 12px 10px;
             }
             @include media-breakpoint-up(xl) {
+              min-height: 250px;
+            }
+            @include media-breakpoint-up(xxl){
               min-height: 230px;
             }
           }
@@ -369,7 +417,7 @@ section {
       @include media-breakpoint-up(lg) {
         padding: 44px 10px 40px;
       }
-      margin-bottom: 77px;
+      margin-bottom: 78px;
       @include media-breakpoint-up(lg) {
         margin-bottom: 40px;
       }

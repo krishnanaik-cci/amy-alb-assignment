@@ -11,7 +11,10 @@ h1 {
 }
 
 h2 {
-    @include font-size(24px);
+    @include font-size(20px);
+    @include media-breakpoint-up(xs-375) {
+        @include font-size(24px);
+    }
     @include line-height(28px);
     @include media-breakpoint-up(md) {
         @include font-size(32px);
@@ -29,7 +32,7 @@ h3 {
     }
 }
 
-p{
+p {
     @include font-size(18px);
     @include line-height(24px);
 }
