@@ -33,6 +33,10 @@
   font-size: calculateRem(14px) !important;
 }
 
+.fs-16 {
+  font-size: calculateRem(14px) !important;
+}
+
 .fs-18 {
   font-size: calculateRem(18px) !important;
 }
@@ -142,4 +146,10 @@
 @include media-breakpoint-up(xs-450){
   display: none;
 }
+}
+
+.d-xxl-block{
+  @include media-breakpoint-up(xxl){
+    display: block !important;
+  }
 }

@@ -2,30 +2,44 @@ footer {
   background-color: $blue-100;
   margin-top: 4px;
   padding: 78px 0px 45px;
+  @include media-breakpoint-up(lg){
+    padding: 20px 0px 45px;
+  }
+  sup{
+    top: -.8em;
+    font-size: 50%;
+    font-weight: bold;
+  }
   @include media-breakpoint-up(lg) {
     margin-top: 10px;
-    padding: 24px 0 21px 0;
+    padding: 24px 135px 16px;
   }
   .footer-links {
     margin-top: 104px;
     @include media-breakpoint-up(lg) {
-      margin-top: 30px;
+      margin-top: 28px;
     }
     a {
       color: $white;
+      font-weight: bold;
       border-right: 1px solid $white;
       text-decoration: underline;
       @include font-size(10px);
       @include line-height(15px);
-      padding: 0 13px;
+      padding: 4px 13px;
       @include media-breakpoint-up(xs-375) {
         @include font-size(13px);
       }
       @include media-breakpoint-up(lg) {
-        padding: 0 15px 15px;
+        @include font-size(12px);
+        padding: 4px 8px 15px;
       }
-      @include media-breakpoint-up(xl) {
-        padding: 0 26px 15px;
+      @include media-breakpoint-up(xl){
+        @include font-size(13px);
+        padding: 4px 15px 10px;
+      }
+      @include media-breakpoint-up(xxl) {
+        padding: 4px 26px 10px;
       }
     }
   }
@@ -34,14 +48,14 @@ footer {
     text-align: center;
     @include media-breakpoint-up(lg) {
       text-align: left;
-      padding: 6px 0 0 89px;
+      padding: 6px 0 0 15px;
     }
     p {
       @include font-size(13px);
       @include line-height(18px);
     }
     img {
-      margin: 66px 0 32px;
+      margin: 58px 0 32px;
       @include media-breakpoint-up(lg) {
         margin: 0 0 17px;
       }
@@ -54,30 +68,23 @@ footer {
     @include media-breakpoint-up(lg) {
       text-align: left;
     }
-    p {
-      @include media-breakpoint-up(lg) {
-        margin-left: 76px;
-      }
-      @include media-breakpoint-up(xl) {
-        margin-left: 108px;
-      }
-    }
     // download enrollment form button css
     .btn {
       @include font-size(14px);
       @include line-height(24px);
-      padding: 10px 30px 8px;
+      padding: 10px 40px 8px 20px;
       @include media-breakpoint-up(xs-375) {
-        padding: 10px 45px 8px;
+        padding: 10px 48px 8px 32px;
       }
       @include media-breakpoint-up(lg) {
-        margin-left: 15px;
         @include font-size(16px);
         @include line-height(24px);
         padding: 10px 50px 8px 35px;
       }
-      @include media-breakpoint-up(xl) {
-        margin-left: 34px;
+      @include media-breakpoint-up(xl){
+        padding: 10px 58px 8px 28px;
+      }
+      @include media-breakpoint-up(xxl) {
         padding: 10px 64px 8px 35px;
       }
       // download icon css
@@ -85,7 +92,7 @@ footer {
         &::after {
           margin: 1px 0 0 5px;
           @include media-breakpoint-up(xs-375) {
-            margin: -1px 0 0 8px;
+            margin: -1px 0 0 3px;
           }
           @include media-breakpoint-up(xl) {
             margin: -1px 0 0 17px;
